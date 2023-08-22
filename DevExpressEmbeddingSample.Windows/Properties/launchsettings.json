@@ -1,0 +1,10 @@
+{
+  "profiles": {
+	"DevExpressEmbeddingSample.Windows (Package)": {
+	  "commandName": "MsixPackage"
+	},
+	"DevExpressEmbeddingSample.Windows (Unpackaged)": {
+	  "commandName": "Project"
+	}
+  }
+}

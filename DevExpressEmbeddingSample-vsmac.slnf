@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "DevExpressEmbeddingSample.sln",
+    "projects": [
+      "DevExpressEmbeddingSample.Mobile\\DevExpressEmbeddingSample.Mobile.csproj",
+      "DevExpressEmbeddingSample.Base\\DevExpressEmbeddingSample.Base.csproj",
+      "DevExpressEmbeddingSample\\DevExpressEmbeddingSample.csproj"
+    ]
+  }
+}
