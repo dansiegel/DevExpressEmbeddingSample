@@ -11,20 +11,28 @@
 	Background="{ThemeResource BackgroundBrush}">
 
 	<Grid utu:SafeArea.Insets="All">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition />
-		</Grid.RowDefinitions>
-		<utu:NavigationBar Content="{Binding Title}" />
-
-		<StackPanel Grid.Row="1"
-					HorizontalAlignment="Center"
-					VerticalAlignment="Center"
-					Spacing="16">
-			<embed:MauiHost x:Name="MauiHostElement"
-					xmlns:embed="using:Uno.Extensions.Maui"
-					xmlns:controls="using:DevExpressEmbeddingSample.MauiControls"
-					Source="controls:EmbeddedControl" />
-		</StackPanel>
+		<NavigationView uen:Region.Attached="True"
+						Grid.Row="1">
+			<NavigationView.MenuItems>
+				<NavigationViewItem Content="DataGrid"
+									uen:Region.Name="DataGrid" />
+				<NavigationViewItem Content="Chart"
+									uen:Region.Name="Chart" />
+			</NavigationView.MenuItems>
+			<Grid uen:Region.Attached="True"
+				  uen:Region.Navigator="Visibility"
+				  Margin="20,40,0,0">
+				<embed:MauiHost uen:Region.Name="DataGrid"
+								xmlns:embed="using:Uno.Extensions.Maui"
+								xmlns:controls="using:DevExpressEmbeddingSample.MauiControls"
+								Source="controls:DataGridControl"
+								Visibility="Collapsed"/>
+				<embed:MauiHost uen:Region.Name="Chart"
+								xmlns:embed="using:Uno.Extensions.Maui"
+								xmlns:controls="using:DevExpressEmbeddingSample.MauiControls"
+								Source="controls:ChartControl"
+								Visibility="Collapsed" />
+			</Grid>
+		</NavigationView>
 	</Grid>
 </Page>

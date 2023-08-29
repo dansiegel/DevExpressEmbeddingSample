@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace DevExpressEmbeddingSample.Presentation;
 
 public partial class MainViewModel : ObservableObject
@@ -32,7 +34,6 @@ public partial class MainViewModel : ObservableObject
 
 	private async Task GoToSecondView()
 	{
-		await _navigator.NavigateViewModelAsync<SecondViewModel>(this, data: new Entity(Name!));
 	}
 
 
